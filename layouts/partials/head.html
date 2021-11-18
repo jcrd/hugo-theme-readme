@@ -36,4 +36,5 @@
     {{- $res = $res | minify | fingerprint | resources.PostProcess -}}
     <link rel="stylesheet" href="{{ $res.Permalink }}" integrity="{{ $res.Data.Integrity }}">
     {{- end }}
+    {{ partial "analytics.html" . }}
 </head>

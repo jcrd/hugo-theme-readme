@@ -16,6 +16,9 @@ description = "Your site description"
 author = "Your name"
 highlight = true
 
+# [params.analytics]
+# goatcounter = ""
+
 [[menu.main]]
 identifier = "about"
 name = "about"
