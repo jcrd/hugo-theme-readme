@@ -1,0 +1,17 @@
+<nav class="flex flex-row justify-between text-lg">
+    <a class="font-bold hover:underline" href="/">
+        {{- .Site.Title -}}
+    </a>
+    <ul class="flex flex-row gap-x-4">
+        {{ range .Site.Menus.main.ByWeight -}}
+        <li>
+            <a
+                class="underline hover:no-underline"
+                href="{{ .URL }}"
+                title="{{ .Title }}">
+                {{- .Name -}}
+            </a>
+        </li>
+        {{- end }}
+    </ul>
+</nav>

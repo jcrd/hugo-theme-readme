@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="border-t">
+    <h1 class="text-xl font-bold py-6">{{ .Title | lower }}</h1>
+    <div class="post-border py-12">
+        <ul class="flex flex-row flex-wrap gap-6">
+            {{ range .Data.Terms -}}
+            <li class="flex flex-row gap-x-2">
+                <a class="{{ $.Data.Singular }} text-gray-500" href="{{ .Page.RelPermalink }}">
+                    {{- if eq $.Data.Singular "tag" }}#{{ end }}{{ .Page.Title -}}
+                </a>
+                <span>({{ .Count }})</span>
+            </li>
+            {{- end }}
+        </ul>
+    </div>
+</div>
+{{ end }}

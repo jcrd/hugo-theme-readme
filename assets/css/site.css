@@ -1,0 +1,19 @@
+.post-list {
+  @apply flex flex-col space-y-6 divide-y;
+}
+
+.post-border {
+  @apply border rounded-lg px-12 pb-12;
+}
+
+.category {
+  @apply hover:underline;
+}
+
+.tag {
+  @apply border rounded-md p-0.5 hover:bg-gray-500 hover:text-white;
+}
+
+.bold-link {
+  @apply font-bold hover:underline;
+}

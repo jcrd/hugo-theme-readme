@@ -1,0 +1,13 @@
+name = "readme"
+license = "MIT"
+licenselink = "https://github.com/jcrd/hugo-theme-readme/blob/master/LICENSE"
+description = "A readable, minimalistic Hugo theme for blogging."
+homepage = "https://github.com/jcrd/hugo-theme-readme"
+demosite = "https://twiddlingbits.net/"
+tags = ["blog", "minimalistic", "light", "tailwind"]
+features = []
+min_version = "0.69"
+
+[author]
+name = "James Reed"
+homepage = "https://twiddlingbits.net/"

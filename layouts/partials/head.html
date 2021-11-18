@@ -1,0 +1,39 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+        {{- block "title" . }}
+        {{- .Title }} - {{ .Site.Title -}}
+        {{ end -}}
+    </title>
+    {{ with .Site.Params.author -}}
+    <meta name="author" content="{{ . }}" />
+    {{- end }}
+    {{ with .Params.description -}}
+    <meta name="description" content="{{ . }}" />
+    {{- else -}}
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    {{- end }}
+    {{ with .Site.Params.Keywords -}}
+    <meta name="keywords" content="{{ delimit . "," }}" />
+    {{- end }}
+
+    {{- hugo.Generator -}}
+
+    {{- $res := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
+
+    {{- if and .Site.Params.highlight (fileExists "assets/css/syntax.css") -}}
+    {{- $styles := $res -}}
+    {{- $res = slice -}}
+    {{- $res = $res | append $styles -}}
+    {{- $res = $res | append (resources.Get "css/syntax.css") -}}
+    {{- $res = $res | resources.Concat "css/main.css" -}}
+    {{- end -}}
+
+    {{ if .Site.IsServer -}}
+    <link rel="stylesheet" href="{{ $res.RelPermalink }}">
+    {{- else -}}
+    {{- $res = $res | minify | fingerprint | resources.PostProcess -}}
+    <link rel="stylesheet" href="{{ $res.Permalink }}" integrity="{{ $res.Data.Integrity }}">
+    {{- end }}
+</head>

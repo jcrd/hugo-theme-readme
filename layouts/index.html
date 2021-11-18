@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="post-border">
+    <ul class="post-list">
+        {{ range where site.RegularPages "Type" "in" site.Params.mainSections -}}
+        {{ partial "post-list.html" . }}
+        {{- end }}
+    </ul>
+</div>
+{{ end }}

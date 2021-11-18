@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="post-border">
+    <ul class="post-list">
+        {{ range .Pages -}}
+        {{ partial "post-list.html" . }}
+        {{- end }}
+    </ul>
+</div>
+{{ end }}

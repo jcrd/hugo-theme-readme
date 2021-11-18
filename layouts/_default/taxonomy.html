@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="border-t">
+    <h1 class="flex flex-row text-xl font-bold py-6">
+        {{- .Data.Singular }}: {{ .Title -}}
+    </h1>
+    <div class="post-border">
+        <ul class="post-list">
+            {{ range .Pages -}}
+            {{ partial "post-list.html" . }}
+            {{- end }}
+        </ul>
+    </div>
+</div>
+{{ end }}

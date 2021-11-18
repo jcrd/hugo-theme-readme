@@ -1,0 +1,33 @@
+<div class="flex flex-col gap-y-1 py-4 text-gray-500">
+    {{ if .Params.date -}}
+    <span class="italic">
+        {{ if eq .Params.lastmod .Params.date -}}
+        {{ .Params.date.Format "Jan 2, 2006" }}
+        {{- else -}}
+        {{ .Params.date.Format "Jan 2, 2006" }}
+        &bull;
+        edited: {{ .Params.lastmod.Format "January 2, 2006" }}
+        {{- end }}
+    </span>
+    {{- end }}
+    <div class="flex flex-row space-x-4">
+        {{ if .Params.categories -}}
+        <ul class="flex flex-row flex-wrap gap-x-2">
+            {{ range .Params.categories -}}
+            <li>
+                <a class="category" href="/categories/{{ . | urlize }}">{{ . }}</a>
+            </li>
+            {{- end }}
+        </ul>
+        {{- end }}
+        {{ if .Params.tags -}}
+        <ul class="flex flex-row flex-wrap gap-x-2">
+            {{ range .Params.tags -}}
+            <li>
+                <a class="tag" href="/tags/{{ . | urlize }}">#{{ . }}</a>
+            </li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    </div>
+</div>

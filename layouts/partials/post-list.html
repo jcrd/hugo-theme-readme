@@ -1,0 +1,13 @@
+<li class="gap-y-2 pt-12">
+    <h1 class="text-2xl font-bold hover:underline">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h1>
+    {{ partial "post-info.html" . }}
+    <div class="prose">
+        {{- .Summary -}}
+    </div>
+    <div class="flex justify-end text-gray-500">
+        <a class="bold-link" href="{{ .Permalink }}">more</a>
+        &nbsp;&rsaquo;
+    </div>
+</li>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+    <body class="flex flex-col h-screen m-auto max-w-2xl">
+        <div class="py-6">
+            {{ partial "header.html" . }}
+        </div>
+        <main class="flex-grow">
+            {{ block "main" . }}{{ end }}
+        </main>
+        <div class="py-10">
+            {{ partial "footer.html" . }}
+        </div>
+    </body>
+</html>
