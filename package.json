@@ -23,8 +23,5 @@
         "> 1%",
         "maintained node versions",
         "not dead"
-    ],
-    "dependencies": {
-        "autoprefix": "^1.0.1"
-    }
+    ]
 }
