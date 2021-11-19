@@ -20,15 +20,12 @@
 
     {{- hugo.Generator -}}
 
-    {{- $res := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
-
-    {{- if and .Site.Params.highlight (fileExists "assets/css/syntax.css") -}}
-    {{- $styles := $res -}}
-    {{- $res = slice -}}
-    {{- $res = $res | append $styles -}}
+    {{- $res := slice (resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js")) -}}
+    {{ if and .Site.Params.highlight (fileExists "assets/css/syntax.css") -}}
     {{- $res = $res | append (resources.Get "css/syntax.css") -}}
-    {{- $res = $res | resources.Concat "css/main.css" -}}
     {{- end -}}
+
+    {{- $res = $res | resources.Concat "css/main.css" -}}
 
     {{ if .Site.IsServer -}}
     <link rel="stylesheet" href="{{ $res.RelPermalink }}">
