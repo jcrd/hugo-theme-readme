@@ -2,7 +2,10 @@ baseURL = "https://example.com"
 languageCode = "en-US"
 title = "Website name"
 
-theme = "readme"
+theme = "hugo-theme-readme"
+# allow building `exampleSite` within theme dir
+themesDir = "../.."
+
 enableInlineShortcodes = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
