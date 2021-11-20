@@ -27,11 +27,11 @@
 
     {{- $res = $res | resources.Concat "css/main.css" -}}
 
-    {{ if .Site.IsServer -}}
-    <link rel="stylesheet" href="{{ $res.RelPermalink }}">
-    {{- else -}}
+    {{ if hugo.IsProduction -}}
     {{- $res = $res | minify | fingerprint | resources.PostProcess -}}
     <link rel="stylesheet" href="{{ $res.Permalink }}" integrity="{{ $res.Data.Integrity }}">
+    {{- else -}}
+    <link rel="stylesheet" href="{{ $res.RelPermalink }}">
     {{- end }}
     {{ partial "analytics.html" . }}
 </head>
