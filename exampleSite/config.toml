@@ -7,6 +7,10 @@ enableInlineShortcodes = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
+# allow HTML in markdown
+[markup.goldmark.renderer]
+unsafe = true
+
 # required by PurgeCSS
 [build]
 writeStats = true
