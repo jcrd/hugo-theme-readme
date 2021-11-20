@@ -2,7 +2,7 @@
     <div class="flex flex-col gap-y-2">
         <div class="flex gap-x-1">
             <a class="hover:underline"
-               href="/about">
+               href="{{ .Site.BaseURL }}/about">
                 {{- .Site.Params.author -}}
             </a>
             <p class="text-gray-500">
@@ -10,7 +10,7 @@
                 {{ .Site.LastChange.Format "2006" }}
                 &sdot;
             </p>
-            <a class="hover:underline" href="/">
+            <a class="hover:underline" href="{{ .Site.BaseURL }}">
                 {{- .Site.Title -}}
             </a>
         </div>
