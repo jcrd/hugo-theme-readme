@@ -29,9 +29,7 @@
 
     {{ if hugo.IsProduction -}}
     {{- $res = $res | minify | fingerprint | resources.PostProcess -}}
-    <link rel="stylesheet" href="{{ $res.Permalink }}" integrity="{{ $res.Data.Integrity }}">
-    {{- else -}}
-    <link rel="stylesheet" href="{{ $res.RelPermalink }}">
     {{- end }}
+    <link rel="stylesheet" href="{{ $res.RelPermalink }}">
     {{ partial "analytics.html" . }}
 </head>
