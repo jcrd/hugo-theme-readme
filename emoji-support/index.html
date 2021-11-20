@@ -1,0 +1,83 @@
+<!doctype html><html>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Emoji Support - Website name</title>
+<meta name=author content="Your name">
+<meta name=description content="Guide to emoji usage in Hugo">
+<meta name=generator content="Hugo 0.89.4">
+<link rel=stylesheet href="/hugo-theme-readme/css/main.min.7492d8992eedd3c7d1aba1b3228208639e884bf18e67982bb518bf38a818641e.css">
+</head>
+<body class="flex flex-col h-screen m-auto max-w-2xl">
+<div class=py-6>
+<nav class="flex flex-row justify-between text-lg">
+<a class="font-bold hover:underline" href=https://jcrd.github.io/hugo-theme-readme>Website name</a>
+<ul class="flex flex-row gap-x-4">
+<li>
+<a class="underline hover:no-underline" href=/hugo-theme-readme/about title>about</a>
+</li><li>
+<a class="underline hover:no-underline" href=/hugo-theme-readme/categories/ title>categories</a>
+</li><li>
+<a class="underline hover:no-underline" href=/hugo-theme-readme/tags/ title>tags</a>
+</li>
+</ul>
+</nav>
+</div>
+<main class=flex-grow>
+<article class="gap-y-2 post-border pt-12">
+<h1 class="text-2xl font-bold">Emoji Support</h1>
+<div class="flex flex-col gap-y-1 py-4 text-gray-500">
+<span class=italic>
+Mar 5, 2019
+</span>
+<div class="flex flex-row space-x-4">
+<ul class="flex flex-row flex-wrap gap-x-2">
+<li>
+<a class=tag href=/tags/emoji>#emoji</a>
+</li>
+</ul>
+</div>
+</div>
+<div class=prose><p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a href=https://gohugo.io/functions/emojify/><code>emojify</code></a> function can be called directly in templates or <a href=https://gohugo.io/templates/shortcode-templates/#inline-shortcodes>Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site’s <a href=https://gohugo.io/getting-started/configuration/>configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<p><span class=nowrap><span class=emojify>🙈</span> <code>:see_no_evil:</code></span> <span class=nowrap><span class=emojify>🙉</span> <code>:hear_no_evil:</code></span> <span class=nowrap><span class=emojify>🙊</span> <code>:speak_no_evil:</code></span></p>
+<br>
+<p>The <a href=http://www.emoji-cheat-sheet.com/>Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<hr>
+<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>.emoji {
+font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;
+}</code></pre></div>
+<style>.emojify{font-family:Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;font-size:2rem;vertical-align:middle}@media screen and (max-width:650px){.nowrap{display:block;margin:25px 0}}</style></div>
+</article>
+</main>
+<div class=py-10>
+<footer class="flex justify-center">
+<div class="flex flex-col gap-y-2">
+<div class="flex gap-x-1">
+<a class=hover:underline href=https://jcrd.github.io/hugo-theme-readme/about>Your name</a>
+<p class=text-gray-500>
+&nbsp;&copy;
+2019
+&sdot;
+</p>
+<a class=hover:underline href=https://jcrd.github.io/hugo-theme-readme>Website name</a>
+</div>
+<div class="flex justify-center gap-x-4 text-gray-500">
+<p>
+powered by
+<a class=bold-link href=https://gohugo.io/>hugo</a>
+</p>
+<p>
+theme
+<a class=bold-link href=https://github.com/jcrd/hugo-theme-readme>
+readme
+</a>
+</p>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
