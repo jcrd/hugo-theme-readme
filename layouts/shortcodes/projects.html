@@ -1,0 +1,7 @@
+{{ with $.Site.Data.projects -}}
+<div class="flex flex-col divide-y">
+    {{ range . -}}
+    {{ partial "project.html" . }}
+    {{- end }}
+</div>
+{{- end }}
