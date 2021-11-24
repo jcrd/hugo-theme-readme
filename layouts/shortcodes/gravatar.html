@@ -1,0 +1,13 @@
+{{- $hash := .Get "email" | lower | md5 -}}
+{{- $size := "128" -}}
+{{ with .Get "size" -}}
+{{- $size = . -}}
+{{- end }}
+<div class="flex gap-x-4 justify-center items-center">
+    <figure>
+        <img src="https://www.gravatar.com/avatar/{{ $hash }}?s={{ $size }}" />
+    </figure>
+    {{ with .Get "text" -}}
+    <span>{{ . }}</span>
+    {{- end }}
+</div>
