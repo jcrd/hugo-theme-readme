@@ -1,0 +1,24 @@
+<a
+    class="flex items-center gap-x-4 font-bold hover:underline"
+    href="{{ .Site.BaseURL }}">
+    {{ if .Site.Params.logo.file -}}
+    {{- $w := 32 -}}
+    {{- $h := 32 -}}
+    {{- with .Site.Params.logo.width -}}
+    {{- $w = . -}}
+    {{- end -}}
+    {{- with .Site.Params.logo.height -}}
+    {{- $h = . -}}
+    {{- end -}}
+    <img
+        src="{{ .Site.BaseURL }}{{ .Site.Params.logo.file }}"
+        width="{{ $w }}"
+        height="{{ $h }}"
+        />
+    {{ if eq .Site.Params.logo.title true -}}
+    {{ .Site.Title }}
+    {{- end }}
+    {{- else -}}
+    {{ .Site.Title }}
+    {{- end }}
+</a>

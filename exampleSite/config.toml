@@ -23,6 +23,12 @@ description = "Your site description"
 author = "Your name"
 highlight = true
 
+# [params.logo]
+# file = "images/icon.png"
+# width = 32
+# height = 32
+# title = true
+
 # [params.analytics]
 # goatcounter = ""
 
