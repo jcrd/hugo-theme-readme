@@ -37,18 +37,24 @@ identifier = "about"
 name = "about"
 url = "/about"
 weight = 1
+[menu.main.params]
+icon = true
 
 [[menu.main]]
 identifier = "categories"
 name = "categories"
 url = "/categories/"
 weight = 2
+[menu.main.params]
+icon = true
 
 [[menu.main]]
 identifier = "tags"
 name = "tags"
 url = "/tags/"
 weight = 3
+[menu.main.params]
+icon = true
 
 [permalinks]
 posts = "/:title/"

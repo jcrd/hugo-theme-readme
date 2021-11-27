@@ -11,3 +11,10 @@ See it in action [here][site].
 ## License
 
 This project is licensed under the MIT License (see [LICENSE](LICENSE)).
+
+## Acknowledgements
+
+* Icons provided by [heroicons][heroicons] ([LICENSE][heroicons-license]).
+
+[heroicons]: https://heroicons.com/
+[heroicons-license]: https://github.com/tailwindlabs/heroicons/blob/master/LICENSE
