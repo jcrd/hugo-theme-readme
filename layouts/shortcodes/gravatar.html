@@ -4,9 +4,13 @@
 {{- $size = . -}}
 {{- end }}
 <div class="flex gap-x-4 justify-center items-center">
-    <figure>
+    {{ with .Get "link" -}}
+    <a href={{ . }}>
+    {{- else -}}
+    <a>
+    {{- end }}
         <img src="https://www.gravatar.com/avatar/{{ $hash }}?s={{ $size }}" />
-    </figure>
+    </a>
     {{ with .Get "text" -}}
     <span>{{ . }}</span>
     {{- end }}
