@@ -1,31 +1,29 @@
-<footer class="flex justify-center">
-    <div class="flex flex-col gap-y-2">
-        <div class="flex gap-x-1">
-            <a class="hover:underline"
-               href="{{ .Site.BaseURL }}/about">
-                {{- .Site.Params.author -}}
+<footer class="flex flex-col gap-y-2">
+    <div class="flex justify-center gap-x-1">
+        <a class="hover:underline"
+           href="{{ .Site.BaseURL }}/about">
+            {{- .Site.Params.author -}}
+        </a>
+        <p class="text-gray-500">
+            &nbsp;&copy;
+            {{ .Site.LastChange.Format "2006" }}
+            &sdot;
+        </p>
+        <a class="hover:underline" href="{{ .Site.BaseURL }}">
+            {{- .Site.Title -}}
+        </a>
+    </div>
+    <div class="flex justify-center gap-x-4 text-gray-500">
+        <p>
+            powered by
+            <a class="bold-link" href="https://gohugo.io/">hugo</a>
+        </p>
+        <p>
+            theme
+            <a class="bold-link"
+               href="https://github.com/jcrd/hugo-theme-readme">
+                readme
             </a>
-            <p class="text-gray-500">
-                &nbsp;&copy;
-                {{ .Site.LastChange.Format "2006" }}
-                &sdot;
-            </p>
-            <a class="hover:underline" href="{{ .Site.BaseURL }}">
-                {{- .Site.Title -}}
-            </a>
-        </div>
-        <div class="flex justify-center gap-x-4 text-gray-500">
-            <p>
-                powered by
-                <a class="bold-link" href="https://gohugo.io/">hugo</a>
-            </p>
-            <p>
-                theme
-                <a class="bold-link"
-                   href="https://github.com/jcrd/hugo-theme-readme">
-                    readme
-                </a>
-            </p>
-        </div>
+        </p>
     </div>
 </footer>
