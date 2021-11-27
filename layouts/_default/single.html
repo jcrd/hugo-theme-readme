@@ -6,4 +6,14 @@
         {{- .Content -}}
     </div>
 </article>
+{{ if .GitInfo -}}
+<div class="flex justify-center mt-2 text-gray-300 gap-x-1">
+    {{ partial "icons.html" "pencil" }}
+    <a
+        class="hover:underline"
+        href="{{ .Site.Params.commitURL }}/{{ .GitInfo.Hash }}">
+        {{ .GitInfo.AbbreviatedHash }}
+    </a>
+</div>
+{{- end }}
 {{ end }}
