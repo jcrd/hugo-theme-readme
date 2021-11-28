@@ -1,24 +1,32 @@
-<a
-    class="flex items-center gap-x-4 font-bold hover:underline"
-    href="{{ .Site.BaseURL }}">
-    {{ if .Site.Params.logo.file -}}
-    {{- $w := 32 -}}
-    {{- $h := 32 -}}
-    {{- with .Site.Params.logo.width -}}
-    {{- $w = . -}}
-    {{- end -}}
-    {{- with .Site.Params.logo.height -}}
-    {{- $h = . -}}
-    {{- end -}}
-    <img
-        src="{{ .Site.BaseURL }}{{ .Site.Params.logo.file }}"
-        width="{{ $w }}"
-        height="{{ $h }}"
-        />
+{{ if .Site.Params.logo.file -}}
+{{- $w := 32 -}}
+{{- $h := 32 -}}
+{{- with .Site.Params.logo.width -}}
+{{- $w = . -}}
+{{- end -}}
+{{- with .Site.Params.logo.height -}}
+{{- $h = . -}}
+{{- end -}}
+<div class="flex items-center gap-x-4">
+    <a href="{{ .Site.BaseURL }}">
+        <img
+            src="{{ .Site.BaseURL }}{{ .Site.Params.logo.file }}"
+            width="{{ $w }}"
+            height="{{ $h }}"
+            />
+    </a>
     {{ if eq .Site.Params.logo.title true -}}
-    {{ .Site.Title }}
+    <a
+        class="invisible sm:visible font-bold hover:underline"
+        href="{{ .Site.BaseURL }}">
+        {{ .Site.Title }}
+    </a>
     {{- end }}
-    {{- else -}}
+</div>
+{{- else -}}
+<a
+    class="invisible sm:visible font-bold hover:underline"
+    href="{{ .Site.BaseURL }}">
     {{ .Site.Title }}
-    {{- end }}
 </a>
+{{- end }}
