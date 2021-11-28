@@ -12,6 +12,12 @@
         <a class="hover:underline" href="{{ .Site.BaseURL }}">
             {{- .Site.Title -}}
         </a>
+        <a
+            class="text-gray-500"
+            type="application/rss+xml"
+            href="{{ .Site.BaseURL }}/posts/index.xml">
+            {{ partial "icons.html" "rss" }}
+        </a>
     </div>
     <div class="flex justify-center gap-x-4 text-gray-500">
         <p>
