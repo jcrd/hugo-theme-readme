@@ -27,6 +27,7 @@ name = "Your name"
 commitURL = "https://github.com/jcrd/hugo-theme-readme/commit"
 description = "Your site description"
 highlight = true
+projectsPhrase = "technologies"
 
 # [params.logo]
 # file = "images/icon.png"

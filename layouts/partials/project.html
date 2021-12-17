@@ -4,9 +4,15 @@
         {{- .description -}}
     </div>
     <div class="flex gap-x-2">
-        <span>developed in:</span>
+        <span>
+            {{ with site.Params.projectsPhrase }}
+            {{ . }}:
+            {{ else }}
+            technologies:
+            {{ end }}
+        </span>
         <div class="flex flex-row flex-wrap gap-x-2">
-            {{ range .languages -}}
+            {{ range .technologies -}}
             <div>
                 <span class="border rounded-md p-1">{{ . }}</span>
             </div>
