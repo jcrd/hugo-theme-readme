@@ -21,6 +21,33 @@ See it in action [here][site].
 
 [goatcounter]: https://www.goatcounter.com/
 
+## Configuration
+
+This theme utilizes the following theme-specific configuration options:
+
+* `commitURL` (*string*): URL for linking to commit of most recent change
+* `highlight` (*boolean*): Whether to highlight code
+* `projectsPhrase` (*string*): Phrase used to label `technologies` key in
+  [projects showcase](#projects-showcase) shortcode
+* `analytics`
+    * `goatcounter` (*string*): Dashboard URL
+* `logo`
+    * `file` (*string*): Path to logo file
+    * `width` (*integer*): Width of logo
+    * `height` (*integer*): Height of logo
+    * `title` (*boolean*): Whether to include the site title alongside logo
+
+### Menu
+
+This theme utilizes the [`main` menu][hugo-menu] with the following [params][hugo-menu-params]:
+
+* `icon` (*boolean*): Whether to include an icon alongside name
+
+  Supports these identifiers: `about`, `categories`, `tags`
+
+[hugo-menu]: https://gohugo.io/content-management/menus/
+[hugo-menu-params]: https://gohugo.io/content-management/menus/#params
+
 ## Shortcodes
 
 ### Projects showcase
