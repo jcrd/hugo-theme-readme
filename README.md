@@ -77,10 +77,12 @@ Usage:
 ```
 {{< gravatar
 email="youremail@domain.com"
-text="This text is displayed to the right side of your avatar."
 link="https://github.com/yourusername"
 >}}
+This text is displayed to the right side of your avatar.
+{{< /gravatar >}}
 ```
+
 ## License
 
 This project is licensed under the MIT License (see [LICENSE](LICENSE)).

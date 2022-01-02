@@ -11,7 +11,7 @@
     {{- end }}
         <img src="https://www.gravatar.com/avatar/{{ $hash }}?s={{ $size }}" />
     </a>
-    {{ with .Get "text" -}}
+    {{ with .Inner -}}
     <span>{{ . }}</span>
     {{- end }}
 </div>
