@@ -6,6 +6,9 @@ module.exports = {
       "./hugo_stats.json",
       "./layouts/**/*.html",
     ],
+    options: {
+      safelist: [/bg-(.*)-200/],
+    },
     extractors: [
       {
         extractor: (content) => {

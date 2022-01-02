@@ -16,6 +16,7 @@ See it in action [here][site].
 * Shortcodes:
   * Projects showcase
   * Gravatar avatar
+  * Notices
 * Analytics, supporting:
     * [goatcounter][goatcounter]
 
@@ -82,6 +83,25 @@ link="https://github.com/yourusername"
 This text is displayed to the right side of your avatar.
 {{< /gravatar >}}
 ```
+
+### Notices
+
+Usage:
+```
+{{< notice label="Note" color="blue" >}}
+Notice this notice.
+{{< /notice >}}
+```
+
+The color parameter must be one of:
+* gray
+* red
+* yellow
+* green
+* blue
+* indigo
+* purple
+* pink
 
 ## License
 
