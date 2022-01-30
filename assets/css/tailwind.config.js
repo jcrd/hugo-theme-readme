@@ -7,7 +7,10 @@ module.exports = {
       "./layouts/**/*.html",
     ],
     options: {
-      safelist: [/bg-(.*)-200/],
+      safelist: [
+        /bg-(.*)-200/,
+        "chroma",
+      ],
     },
     extractors: [
       {
