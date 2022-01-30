@@ -34,8 +34,10 @@
         </div>
         {{- end }}
     </div>
+    {{ if eq .Section "posts" -}}
     <div class="flex gap-x-1 italic">
         {{ partial "icons.html" "clock" }}
         {{ .ReadingTime }} min{{ if not (eq .ReadingTime 1) }}s{{ end }}
     </div>
+    {{- end }}
 </div>
