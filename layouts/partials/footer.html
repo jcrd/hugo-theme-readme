@@ -19,6 +19,7 @@
             {{ partial "icons.html" "rss" }}
         </a>
     </div>
+    {{ if .Site.Params.vanityFooter -}}
     <div class="flex justify-center gap-x-4 text-gray-500">
         <p>
             powered by
@@ -32,4 +33,5 @@
             </a>
         </p>
     </div>
+    {{- end }}
 </footer>

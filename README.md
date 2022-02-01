@@ -37,6 +37,7 @@ This theme utilizes the following theme-specific configuration options:
     * `width` (*integer*): Width of logo
     * `height` (*integer*): Height of logo
     * `title` (*boolean*): Whether to include the site title alongside logo
+* `vanityFooter` (*boolean*): Whether to show vanity footer (hugo/theme info)
 
 ### Menu
 
