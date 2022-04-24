@@ -9,6 +9,12 @@
     </span>
     {{- end }}
     <div class="flex flex-row gap-x-4">
+        {{ if (and (eq .Section "posts") (or (not .Params.categories) (not .Params.tags))) -}}
+        <div class="flex gap-x-1 italic">
+            {{ partial "icons.html" "clock" }}
+            {{ .ReadingTime }} min{{ if not (eq .ReadingTime 1) }}s{{ end }}
+        </div>
+        {{- end }}
         {{ if .Params.categories -}}
         <div class="flex gap-x-1">
             {{ partial "icons.html" "categories" }}
@@ -34,7 +40,7 @@
         </div>
         {{- end }}
     </div>
-    {{ if eq .Section "posts" -}}
+    {{ if (and (eq .Section "posts") (and .Params.categories .Params.tags)) -}}
     <div class="flex gap-x-1 italic">
         {{ partial "icons.html" "clock" }}
         {{ .ReadingTime }} min{{ if not (eq .ReadingTime 1) }}s{{ end }}
