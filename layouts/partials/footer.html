@@ -20,9 +20,14 @@
         </a>
     </div>
     {{ with .Site.Params.supportURL -}}
-    <a class="flex justify-center gap-x-1 text-gray-500 text-sm hover:underline" href="{{ . }}">
-        {{ partial "icons.html" "heart" }} support
-    </a>
+    <div class="flex justify-center gap-x-1">
+        <a href="{{ . }}">
+            {{ partial "icons.html" "heart" }}
+        </a>
+        <a class="text-gray-500 text-sm hover:underline" href="{{ . }}">
+            support
+        </a>
+    </div>
     {{- end }}
     {{ if .Site.Params.vanityFooter -}}
     <div class="flex justify-center gap-x-4 text-gray-500">
