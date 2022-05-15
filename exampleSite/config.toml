@@ -29,6 +29,7 @@ description = "Your site description"
 highlight = true
 projectsPhrase = "technologies"
 vanityFooter = false
+supportURL = "https://ko-fi.com/twiddlingbits"
 
 # [params.logo]
 # file = "images/icon.png"
