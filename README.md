@@ -38,6 +38,7 @@ This theme utilizes the following theme-specific configuration options:
     * `height` (*integer*): Height of logo
     * `title` (*boolean*): Whether to include the site title alongside logo
 * `vanityFooter` (*boolean*): Whether to show vanity footer (hugo/theme info)
+* `supportURL` (*string*): URL for linking to support/donation page
 
 ### Menu
 
