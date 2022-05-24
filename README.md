@@ -111,7 +111,11 @@ This project is licensed under the MIT License (see [LICENSE](LICENSE)).
 
 ## Acknowledgements
 
-* Icons provided by [heroicons][heroicons] ([LICENSE][heroicons-license]).
+Icons provided by:
+  * [heroicons][heroicons] ([LICENSE][heroicons-license])
+  * [bootstrap icons][bi] ([LICENSE][bi-license])
 
 [heroicons]: https://heroicons.com/
 [heroicons-license]: https://github.com/tailwindlabs/heroicons/blob/master/LICENSE
+[bi]: https://icons.getbootstrap.com/
+[bi-license]: https://github.com/twbs/icons/blob/main/LICENSE.md
