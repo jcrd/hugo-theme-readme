@@ -1,0 +1,38 @@
+{{ if (eq .Section "posts") -}}
+<div class="flex justify-between pt-4">
+    <div class="flex gap-x-4 text-gray-500">
+        {{ if .Params.categories -}}
+        <div class="flex gap-x-1">
+            {{ partial "icons.html" "categories" }}
+            <ul class="flex flex-row flex-wrap gap-x-2">
+                {{ range .Params.categories -}}
+                <li>
+                    <a class="category" href="/categories/{{ . | urlize }}">{{ . }}</a>
+                </li>
+                {{- end }}
+            </ul>
+        </div>
+        {{- end }}
+        {{ if .Params.tags -}}
+        <div class="flex gap-x-1">
+            {{ partial "icons.html" "tags" }}
+            <ul class="flex flex-row flex-wrap gap-x-2">
+                {{ range .Params.tags -}}
+                <li>
+                    <a class="tag" href="/tags/{{ . | urlize }}">#{{ . }}</a>
+                </li>
+                {{- end }}
+            </ul>
+        </div>
+        {{- end }}
+    </div>
+    {{ if .GitInfo -}}
+    <div class="flex text-gray-300 gap-x-1">
+        {{ partial "icons.html" "pencil" }}
+        <a class="hover:underline" href="{{ .Site.Params.commitURL }}/{{ .GitInfo.Hash }}">
+            {{ .GitInfo.AbbreviatedHash }}
+        </a>
+    </div>
+    {{- end }}
+</div>
+{{- end }}

@@ -2,18 +2,11 @@
 <article class="gap-y-2 post-border pt-6 md:pt-12">
     <h1 class="text-2xl font-bold">{{ .Title }}</h1>
     {{ partial "post-info.html" . }}
-    <div class="prose">
-        {{- .Content -}}
+    <div class="flex flex-col gap-y-6 md:gap-y-12">
+        <div class="prose">
+            {{- .Content -}}
+        </div>
+        {{ partial "post-footer.html" . }}
     </div>
 </article>
-{{ if .GitInfo -}}
-<div class="flex justify-center mt-2 text-gray-300 gap-x-1">
-    {{ partial "icons.html" "pencil" }}
-    <a
-        class="hover:underline"
-        href="{{ .Site.Params.commitURL }}/{{ .GitInfo.Hash }}">
-        {{ .GitInfo.AbbreviatedHash }}
-    </a>
-</div>
-{{- end }}
 {{ end }}
